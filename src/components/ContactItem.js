@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function ContactItem({ contact, onDelete }) {
-  return (
-    <li>
-      {contact.name}: {contact.number}
-      <button type="button" onClick={onDelete}>
-        Delete
-      </button>
-    </li>
-  );
+class ContactItem extends Component {
+  render() {
+    const { contact, onDelete } = this.props;
+    
+    return (
+      <li>
+        {contact.name}: {contact.number}
+        <button type="button" onClick={onDelete}>
+          Delete
+        </button>
+      </li>
+    );
+  }
 }
 
 export default ContactItem; 
